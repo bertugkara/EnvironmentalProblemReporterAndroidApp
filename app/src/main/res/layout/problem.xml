@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/problemXML"
+    android:layout_width="match_parent"
+    android:background="@color/purple_700"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ProblemImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/error"
+            app:layout_constraintBottom_toTopOf="@id/ProblemSeverityText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ProblemSeverityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Severity"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/ProblemcreatorUser"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ProblemImageView" />
+
+        <TextView
+            android:id="@+id/ProblemcreatorUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:hint="CreatorUser"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@id/problemLocationText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ProblemSeverityText" />
+
+        <TextView
+            android:id="@+id/problemLocationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="0dp"
+            android:hint="ProblemLocation"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@id/ProblemID"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ProblemcreatorUser" />
+
+        <TextView
+            android:id="@+id/ProblemID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:hint="ProblemID"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/typeOfProblem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/problemLocationText" />
+
+        <TextView
+            android:id="@+id/typeOfProblem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:text="TypeOfProblem"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@id/nameOfPlace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ProblemID" />
+
+        <TextView
+            android:id="@+id/nameOfPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:text="nameOfPlace"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/createdAtProblem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/typeOfProblem" />
+
+        <TextView
+            android:id="@+id/createdAtProblem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Created At"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/ProblemDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameOfPlace" />
+
+        <TextView
+            android:id="@+id/ProblemDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:hint="ProblemDescriotion"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@id/deleteProblem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createdAtProblem" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete This Problem"
+                android:id="@+id/deleteProblem"
+                app:layout_constraintBottom_toBottomOf="@id/ProblemDescription"
+                app:layout_constraintBottom_toTopOf="@id/materialDivider1"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/materialDivider1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="@id/deleteProblem"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

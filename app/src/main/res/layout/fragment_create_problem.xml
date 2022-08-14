@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/purple_700"
+    android:id="@+id/AddProblemFragment"
+    android:orientation="vertical"
+    tools:context=".Fragment.createProblem">
+
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutOfFragmentCreateProblem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/PhotoOfCreateProblem"
+            android:src="@drawable/error"/>
+
+        <EditText
+            android:id="@+id/CreateProblemDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/PhotoOfCreateProblem"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Description"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/CreateProblemLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CreateProblemDescription"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Location"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/CreateProblemNameOfThePlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CreateProblemLocation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Name Of The Place"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/CreateProblemSeverity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CreateProblemNameOfThePlace"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Severity (1 to 10)"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <TextView
+            android:id="@+id/typeHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CreateProblemSeverity"
+            android:layout_marginTop="10dp"
+            android:text="Select Type"
+            android:textAlignment="center"
+            android:textColor="@color/white"/>
+
+        <RadioGroup
+            android:id="@+id/RadioGroupCreateProblem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/typeHint"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+
+            >
+
+            <RadioButton
+                android:id="@+id/TypeFire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="FIRE" />
+
+            <RadioButton
+                android:id="@+id/typePOLLUTION"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="POLLUTION" />
+
+            <RadioButton
+                android:id="@+id/typeNOISY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="NOISY" />
+
+            <RadioButton
+                android:id="@+id/typeSTORM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="STORM" />
+
+            <RadioButton
+                android:id="@+id/typeOTHER"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="OTHER" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/createProblemPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RadioGroupCreateProblem"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:text="Add Photo" />
+
+        <Button
+            android:id="@+id/submitProblem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createProblemPhoto"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:text="Submit Problem" />
+<com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FF8C00"
+        android:id="@+id/CreateFragmentNavigationView"
+        app:menu="@menu/nav_menu" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

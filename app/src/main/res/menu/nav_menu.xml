@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ProfileActivityNav"
+        android:icon="@drawable/profile"
+        android:title="Profile" />
+    <item
+        android:id="@+id/MainActivityNav"
+        android:icon="@drawable/home"
+        android:title="Home Page" />
+    <item
+        android:id="@+id/AddProblemFragmentNav"
+        android:icon="@drawable/plus"
+        android:title="Add Problem" />
+</menu>
